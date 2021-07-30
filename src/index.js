@@ -36,8 +36,10 @@ commentForm.addEventListener('submit', (e) => {
 function renderImage(data){
     console.log("check-data",data)
     titlePic.textContent = data.title; // provides the title 
-    imageId.src = data.image; // gets the image 
-    renderLikes(data.likes); 
+    imageId.src = data.image; // gets the image
+    likes = data.likes
+    renderLikes();
+    //renderLikes(data.likes); 
     setComments(data.comments)
 
 }
